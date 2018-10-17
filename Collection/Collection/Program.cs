@@ -11,28 +11,41 @@ namespace Collection
 
             Deck<Card> myDeck = new Deck<Card>();
 
+            int counter = 0;
             for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 13; j++)
+                for (int j = 0; j < 3; j++)
                 {
                     Card newCard = new Card();
                     newCard.Suit = (Suit)i;
-                    newCard.Value = (Value)j;
+                    newCard.Value = (Value)counter++;
                     myDeck.Add(newCard);
                 }
             }
 
+            Console.WriteLine(DisplayAndCount(myDeck));
+
+            myDeck.Remove(4);
+
+            Console.WriteLine(DisplayAndCount(myDeck));
+        }
+
+
+        public static string DisplayAndCount(Deck<Card> cards)
+        {
             int cardCount = 0;
 
-            foreach (Card card in myDeck)
+            foreach (Card card in cards)
             {
-                Console.WriteLine($"{card.Value} of {card.Suit}");
-                cardCount++;
+                if (card != null)
+                {
+                    cardCount++;
+                    Console.WriteLine($"{cardCount}: {card.Value} of {card.Suit}");
+                }
+                else break;
             }
 
-            Console.WriteLine($"There are {cardCount} cards in this Deck");
-
-
+            return $"There are {cardCount} cards in this Deck";
         }
     }
 }
