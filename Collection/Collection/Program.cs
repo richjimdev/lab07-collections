@@ -25,12 +25,19 @@ namespace Collection
 
             Console.WriteLine(DisplayAndCount(myDeck));
 
-            myDeck.Remove(4);
+            Console.WriteLine("Type to remove");
+            string choice = Console.ReadLine();
+
+            myDeck.Remove(Int32.Parse(choice));
 
             Console.WriteLine(DisplayAndCount(myDeck));
+
+            //Deck<Card> deckOfSuits = new Deck<Card>();
+
+            Console.WriteLine(DisplayAndCount(myDeck.ReturnOfSuit((Suit)1)));
+
         }
-
-
+        
         public static string DisplayAndCount(Deck<Card> cards)
         {
             int cardCount = 0;
@@ -42,7 +49,6 @@ namespace Collection
                     cardCount++;
                     Console.WriteLine($"{cardCount}: {card.Value} of {card.Suit}");
                 }
-                else break;
             }
 
             return $"There are {cardCount} cards in this Deck";
