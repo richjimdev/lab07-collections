@@ -7,7 +7,7 @@ namespace Collection.Classes
     public class Card
     {
         public Suit Suit { get; set; }
-        public string Value { get; set; }
+        public Value Value { get; set; }
     }
 
     public enum Suit
@@ -16,5 +16,22 @@ namespace Collection.Classes
         Clubs,
         Diamonds,
         Hearts
+    }
+
+    public enum Value
+    {
+        Ace,
+        Two,
+        Three,
+        Four,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        Ten,
+        Jack,
+        Queen,
+        King
     }
 }

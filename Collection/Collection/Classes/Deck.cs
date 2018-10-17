@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Collection.Classes
 {
-    class Deck<T> : IEnumerable
+    public class Deck<T> : IEnumerable
     {
         T[] cards = new T[52];
         int count = 0;
