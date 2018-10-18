@@ -40,8 +40,6 @@ namespace Collection.Classes
             return cards;
         }
 
-        //Book book = (Book) Conert.ChangeType(books[int], typeof(book));
-
         public Deck<Card> ReturnOfSuit(Suit suit)
         {
             Deck<Card> deckOfSuit = new Deck<Card>();
