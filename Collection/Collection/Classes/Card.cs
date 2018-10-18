@@ -10,6 +10,9 @@ namespace Collection.Classes
         public Value Value { get; set; }
     }
 
+    /// <summary>
+    /// Enum for all 4 suits
+    /// </summary>
     public enum Suit
     {
         Spades,
@@ -18,6 +21,9 @@ namespace Collection.Classes
         Hearts
     }
 
+    /// <summary>
+    /// Enum for all cards, really helpful to create a whole deck with a loop
+    /// </summary>
     public enum Value
     {
         Ace,

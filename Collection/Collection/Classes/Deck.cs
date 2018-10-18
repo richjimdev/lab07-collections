@@ -10,6 +10,10 @@ namespace Collection.Classes
         T[] cards = new T[15];
         public int count = 0;
 
+        /// <summary>
+        /// Adds a card to the deck
+        /// </summary>
+        /// <param name="card">Takes in a card object</param>
         public void Add(T card)
         {
             if (count == cards.Length)
@@ -20,6 +24,11 @@ namespace Collection.Classes
             cards[count++] = card;
         }
 
+        /// <summary>
+        /// Removes a card from the deck
+        /// </summary>
+        /// <param name="idx"></param>
+        /// <returns>A generic array of cards</returns>
         public T[] Remove(int idx)
         {
             T[] newArr = new T[cards.Length - 1];
@@ -41,6 +50,11 @@ namespace Collection.Classes
             return cards;
         }
 
+        /// <summary>
+        /// Grabs card by a specific suit
+        /// </summary>
+        /// <param name="suit">Takes in a Suit enum</param>
+        /// <returns>Returns a Deck with results</returns>
         public Deck<Card> ReturnOfSuit(Suit suit)
         {
             Deck<Card> deckOfSuit = new Deck<Card>();
