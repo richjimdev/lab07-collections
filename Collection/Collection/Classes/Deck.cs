@@ -8,7 +8,7 @@ namespace Collection.Classes
     public class Deck<T> : IEnumerable
     {
         T[] cards = new T[15];
-        int count = 0;
+        public int count = 0;
 
         public void Add(T card)
         {
@@ -36,6 +36,7 @@ namespace Collection.Classes
                     counter++;
                 }
             }
+            count--;
             cards = newArr;
             return cards;
         }
